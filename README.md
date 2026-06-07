@@ -174,6 +174,6 @@ See the LICENSE file for details.
 
 > **Note**
 >
->GestureDrive began as a project done for fun and to gain experience in learning about computer vision, MediaPipe, gesture detection, user >interface design, and virtual gamepad emulation using the Python programming language.
+>GestureDrive began as a project done for fun and to gain experience in learning about computer vision, MediaPipe, gesture detection, user interface design, and virtual gamepad emulation using the Python programming language.
 >Although it has evolved into a fully functional program, the initial purpose of GestureDrive was purely educational.
 
