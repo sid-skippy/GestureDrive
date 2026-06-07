@@ -1,7 +1,5 @@
-# GestureDrive
-
 <p align="left">
-  <img src="docs/images/6.png" width="400">
+  <img src="docs/images/6.png" width="1000">
 </p>
 
 Control racing games using hand gestures and a standard webcam.
