@@ -1,77 +1,96 @@
 # GestureDrive
 
-> Hand-gesture virtual gamepad for **Forza Horizon** (and any Xbox-compatible game).
-> Built with MediaPipe + vgamepad. Packaged as a polished desktop app.
+![GestureDrive](docs/images/6.png)
+
+Control racing games using hand gestures and a standard webcam.
+
+GestureDrive uses MediaPipe hand tracking and a virtual Xbox controller to convert natural hand movements into steering, throttle, braking, handbrake and gear controls.
+
+No gloves. No controllers. Just a webcam.
 
 ---
 
-## Project Structure
+## Features
 
-```
-GestureDrive/
-├── main.py                  ← Entry point
-├── requirements.txt
-├── GestureDrive.spec        ← PyInstaller build spec
-│
-├── gesturedrive/
-│   ├── app.py               ← Application controller / screen router
-│   │
-│   ├── ui/
-│   │   ├── theme.py         ← Colour palette + font loading
-│   │   ├── widgets.py       ← GDButton, GDBar, GDSlider, etc.
-│   │   ├── welcome.py       ← Welcome / hero screen
-│   │   ├── runtime.py       ← Live driving screen
-│   │   └── settings_screen.py
-│   │
-│   ├── calibration/
-│   │   └── wizard.py        ← 5-step guided calibration wizard
-│   │
-│   ├── gestures/
-│   │   └── engine.py        ← All gesture logic (preserved from original)
-│   │
-│   ├── settings/
-│   │   └── manager.py       ← config.json read/write
-│   │
-│   └── config/
-│       └── paths.py         ← Centralised path resolution (dev + frozen)
-│
-├── assets/
-│   └── icons/               ← icon.png / icon.ico (optional, add your own)
-│
-├── fonts/                   ← Drop .ttf files here (Rajdhani recommended)
-│   └── README.txt
-│
-├── config/                  ← Auto-created at runtime
-│   ├── config.json
-│   └── calibration.json
-│
-└── hand_landmarker.task     ← MediaPipe model (REQUIRED — download separately)
-```
+* Real-time hand tracking using MediaPipe
+* Gesture-based steering
+* Analog throttle and brake control
+* Handbrake gesture
+* Gear up and gear down gestures
+* Interactive tutorial and calibration wizard
+* Virtual Xbox controller emulation
+* Customizable control sensitivity
+* Modern desktop interface
+* Windows executable builds
 
 ---
 
-## Prerequisites
+## Screenshots
 
-### 1. Python 3.10 or 3.11 (64-bit, Windows)
+### Welcome Screen
 
-### 2. ViGEmBus driver (required for vgamepad)
-Download and install from:
+![Welcome Screen](docs/images/1.png)
+
+### Calibration Wizard
+
+![Calibration Wizard](docs/images/3.png)
+
+### Settings
+
+![Settings](docs/images/2.png)
+
+### Runtime
+
+![Runtime](docs/images/5.png)
+
+---
+
+## Controls
+
+| Gesture                   | Action    |
+| ------------------------- | --------- |
+| Tilt left hand            | Steering  |
+| Open left hand            | Handbrake |
+| Raise right thumb         | Throttle  |
+| Lower right thumb         | Brake     |
+| Raise right index finger  | Gear Up   |
+| Raise right little finger | Gear Down |
+
+---
+
+## Requirements
+
+* Windows 10 / Windows 11
+* Webcam (30 FPS recommended)
+* ViGEm Bus Driver
+
+Install ViGEm Bus:
+
 https://github.com/nefarius/ViGEmBus/releases
 
-### 3. MediaPipe hand landmark model
-Download `hand_landmarker.task` from:
-https://developers.google.com/mediapipe/solutions/vision/hand_landmarker#models
+---
 
-Place it in the project root (same folder as `main.py`).
+## Installation
 
-### 4. Install Python dependencies
+### Download Release
+
+1. Download the latest release.
+2. Install the ViGEm Bus Driver.
+3. Launch GestureDrive.
+4. Complete the tutorial and calibration process.
+5. Start your game.
+
+---
+
+## Running From Source
+
+Install dependencies:
+
 ```bash
 pip install -r requirements.txt
 ```
 
----
-
-## Running in Development
+Run:
 
 ```bash
 python main.py
@@ -79,100 +98,62 @@ python main.py
 
 ---
 
-## Custom Fonts (Optional but Recommended)
+## Building
 
-GestureDrive looks best with **Rajdhani** (free on Google Fonts):
-https://fonts.google.com/specimen/Rajdhani
+Install development dependencies:
 
-Download and place the `.ttf` files into the `fonts/` directory:
-```
-fonts/
-  Rajdhani-Regular.ttf
-  Rajdhani-SemiBold.ttf
-  Rajdhani-Bold.ttf
-```
-
-The application will auto-detect and load them. Falls back to **Segoe UI** if missing.
-
----
-
-## Building the Windows Executable
-
-### Step 1 — Install PyInstaller
 ```bash
-pip install pyinstaller
+pip install -r requirements-dev.txt
 ```
 
-### Step 2 — Build
+Build:
+
 ```bash
 pyinstaller GestureDrive.spec
 ```
 
-### Step 3 — Find your release
-```
-dist/
-  GestureDrive/
-    GestureDrive.exe   ← Launch this
-    (all bundled DLLs and assets)
+The executable will be generated in:
+
+```text
+dist/GestureDrive/
 ```
 
-### Step 4 — Distribute
-Zip the entire `dist/GestureDrive/` folder and share it.
-Users need ViGEmBus installed — nothing else.
+---
+
+## Supported Games
+
+GestureDrive works with games that support Xbox controllers.
+
+Tested with:
+
+* Forza Horizon 4
+* Forza Horizon 5
+* Need for Speed Unbound
+
+Additional games may also work.
 
 ---
 
-## Packaging Notes
+## Known Limitations
 
-- `hand_landmarker.task` must exist in the project root **before** building.
-- Fonts in `fonts/` are bundled automatically by the `.spec`.
-- `config/` directory is created next to the `.exe` on first run — it is writable even when the rest of the bundle is read-only.
-- If you add an app icon: convert to `.ico`, place it at `assets/icons/icon.ico`, and uncomment the `icon=` line in `GestureDrive.spec`.
-
----
-
-## Gesture Reference
-
-| Hand  | Gesture               | Action      |
-|-------|-----------------------|-------------|
-| Left  | Thumb tilt left/right | Steering    |
-| Left  | Pinky extended        | Handbrake   |
-| Right | Thumb raised          | Throttle    |
-| Right | Thumb on index finger | Brake       |
-| Right | Index finger extended | Gear Up     |
-| Right | Pinky extended        | Gear Down   |
+* Requires adequate lighting
+* Works best with a plain background
+* Webcam quality affects tracking performance
+* Windows only
 
 ---
 
-## Settings
+## Credits
 
-All settings are saved to `config/config.json` automatically.
-
-| Setting              | Default | Range      | Description                        |
-|----------------------|---------|------------|------------------------------------|
-| steering_sensitivity | 1.0     | 0.3 – 3.0  | Multiplier for steering input      |
-| throttle_sensitivity | 1.0     | 0.3 – 3.0  | Multiplier for throttle input      |
-| dead_zone            | 0.25    | 0.0 – 0.5  | Steering centre dead zone          |
-| smoothing            | 0.2     | 0.05 – 0.95| Exponential smoothing factor       |
-| camera_index         | 0       | 0 – 5      | OpenCV camera index                |
-| fps_limit            | 60      | 15 – 120   | Target frame rate                  |
-| ui_scale             | 1.0     | 0.75 – 2.0 | UI font/element scaling            |
+* MediaPipe
+* OpenCV
+* vgamepad
+* ViGEmBus
+* Pillow
 
 ---
 
-## Troubleshooting
+## License
 
-**"Camera not found"**
-→ Check `camera_index` in Settings. Try 0, 1, 2.
-
-**"MediaPipe model missing"**
-→ Download `hand_landmarker.task` and place it next to `main.py` (or the `.exe`).
-
-**Gamepad not working in game**
-→ Ensure ViGEmBus is installed and the game is set to "Xbox controller" input.
-
-**Hands not detected**
-→ Improve lighting. Avoid dark backgrounds. Keep hands 50–80 cm from camera.
-
-**App freezes on exit**
-→ Always use the ✕ Exit button inside the app rather than closing the window directly.
+Released under the MIT License.
+See the LICENSE file for details.
