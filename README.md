@@ -168,7 +168,7 @@ Other than racing games, games accepting XBOX controller as input also work. But
 
 ## Known Limitations and Bugs
 
-* Webcam quality affects tracking performance
+* Webcam quality affects tracking performance and needs a well-lit room for increased camera fps
 * When accessing laptop camera, it's LED might blink 2-3 times before working. It is just how cameras talk to the app and is not GestureDrive's fault
 * Supported only on Windows
 
