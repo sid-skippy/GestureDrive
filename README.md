@@ -1,7 +1,12 @@
-# GestureDrive
+<p align="center">
+  <img src="https://img.shields.io/badge/version-v1.0.0-blue">
+  <img src="https://img.shields.io/badge/license-MIT-green">
+  <img src="https://img.shields.io/badge/platform-Windows%2010%20%7C%2011-blue">
+  <img src="https://img.shields.io/badge/python-3.10+-blue">
+</p>
 
 <p align="left">
-  <img src="docs/images/6.png" width="400">
+  <img src="docs/images/6.png" width="1000">
 </p>
 
 Control racing games using hand gestures and a standard webcam.
@@ -32,40 +37,46 @@ No gloves. No controllers. Just a webcam.
 ### Welcome Screen
 
 <p align="center">
-  <img src="docs/images/1.png" width="800">
+  <img src="docs/images/1.png" width="600">
 </p>
 
 ### Calibration Wizard
 
 <p align="center">
-  <img src="docs/images/3.png" width="260">
-  <img src="docs/images/4.png" width="250">
+  <img src="docs/images/3.png" width="150">
+  <img src="docs/images/4.png" width="150">
 </p>
 
 ### Settings
 
 <p align="center">
-  <img src="docs/images/2.png" width="800">
+  <img src="docs/images/2.png" width="600">
 </p>
 
 ### Runtime
 
 <p align="center">
-  <img src="docs/images/5.png" width="800">
+  <img src="docs/images/5.png" width="600">
+</p>
+
+### Gameplay
+
+<p align="center">
+  <img src="docs/images/7.png" width="600">
 </p>
 
 ---
 
-## Controls
+## Default Controls ('+' represents control of that geture can be customised)
 
-| Gesture                   | Action    |
-| ------------------------- | --------- |
-| Tilt left hand            | Steering  |
-| Open left hand            | Handbrake |
-| Raise right thumb         | Throttle  |
-| Lower right thumb         | Brake     |
-| Raise right index finger  | Gear Up   |
-| Raise right little finger | Gear Down |
+| Gesture                     | Action    |
+| --------------------------- | --------- |
+| Tilt left hand              | Steering  |
+| Open left hand +            | Handbrake |
+| Raise right thumb           | Throttle  |
+| Lower right thumb           | Brake     |
+| Flick right index finger +  | Gear Up   |
+| Flick right little finger + | Gear Down |
 
 ---
 
@@ -153,8 +164,7 @@ GestureDrive works with games that support XBOX controllers.
 
 Tested with:
 
-* Forza Horizon 4
-* Forza Horizon 5
+* Forza Horizon 6
 * Need for Speed Unbound
 
 Other than racing games, games accepting XBOX controller as input also work. But may require custom control bindings both in GestureDrive and in-game.
@@ -163,11 +173,9 @@ Other than racing games, games accepting XBOX controller as input also work. But
 
 ## Known Limitations and Bugs
 
-* Webcam quality affects tracking performance
-* When accessing laptop camera, it's LED might blink 2-3 times before working. It is just how cameras talk to the app and is not GestureDrive's fault
-* Supported only on Windows
-
-* GestureDrive might crash/freeze when opening up the camera. Though it is rare can be fixed by running the app as ADMIN
+* Webcam quality affects tracking performance and needs a well-lit room for increased camera fps (capped to 30fps for stability)
+* When accessing laptop camera, it's LED might blink 2-3 times before working. It is just how cameras communicate and is not GestureDrive's fault
+* GestureDrive might crash/freeze when opening up the camera. Though it is VERY RARE can be fixed by running the app as ADMIN
 * Making the app window small might overlap certain text, but doesn't affect its working
 * Scrolling also works when it is not necessary on the home screen
 
