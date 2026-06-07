@@ -93,6 +93,22 @@ https://github.com/nefarius/ViGEmBus/releases
 
 ---
 
+## Build Configurations
+
+### Release Build
+
+* pyinstaller GestureDrive.spec
+
+* Creates the end-user version without a console window.
+
+### Development Build
+
+* pyinstaller GestureDrive-dev.spec
+
+* Creates a debug version with a visible console for troubleshooting.
+
+---
+
 ## Running From Source
 
 Install dependencies:
