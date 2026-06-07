@@ -43,8 +43,8 @@ No gloves. No controllers. Just a webcam.
 ### Calibration Wizard
 
 <p align="center">
-  <img src="docs/images/3.png" width="260">
-  <img src="docs/images/4.png" width="250">
+  <img src="docs/images/3.png" width="150">
+  <img src="docs/images/4.png" width="150">
 </p>
 
 ### Settings
