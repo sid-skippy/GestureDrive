@@ -25,7 +25,7 @@ class WelcomeScreen(tk.Frame):
         (
             "CAMERA",
             "- Resolution\n"
-            "  640 × 480 or higher\n\n"
+            "  640 x 480 or higher\n\n"
             "- Frame rate\n"
             "  Capped 30 FPS recommended\n\n"
             "- Keep your webcam straight\n"
