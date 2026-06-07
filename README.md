@@ -158,8 +158,7 @@ GestureDrive works with games that support XBOX controllers.
 
 Tested with:
 
-* Forza Horizon 4
-* Forza Horizon 5
+* Forza Horizon 6
 * Need for Speed Unbound
 
 Other than racing games, games accepting XBOX controller as input also work. But may require custom control bindings both in GestureDrive and in-game.
