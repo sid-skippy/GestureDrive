@@ -1,6 +1,8 @@
 # GestureDrive
 
-![GestureDrive](docs/images/6.png)
+<p align="left">
+  <img src="docs/images/6.png" width="400">
+</p>
 
 Control racing games using hand gestures and a standard webcam.
 
@@ -29,19 +31,28 @@ No gloves. No controllers. Just a webcam.
 
 ### Welcome Screen
 
-![Welcome Screen](docs/images/1.png)
+<p align="center">
+  <img src="docs/images/1.png" width="800">
+</p>
 
 ### Calibration Wizard
 
-![Calibration Wizard](docs/images/3.png)
+<p align="center">
+  <img src="docs/images/3.png" width="260">
+  <img src="docs/images/4.png" width="250">
+</p>
 
 ### Settings
 
-![Settings](docs/images/2.png)
+<p align="center">
+  <img src="docs/images/2.png" width="800">
+</p>
 
 ### Runtime
 
-![Runtime](docs/images/5.png)
+<p align="center">
+  <img src="docs/images/5.png" width="800">
+</p>
 
 ---
 
@@ -74,11 +85,11 @@ https://github.com/nefarius/ViGEmBus/releases
 
 ### Download Release
 
-1. Download the latest release.
-2. Install the ViGEm Bus Driver.
-3. Launch GestureDrive.
-4. Complete the tutorial and calibration process.
-5. Start your game.
+1. Download the latest release
+2. Install the ViGEm Bus Driver. You may need to RESTART your PC
+3. Launch GestureDrive
+4. Complete the tutorial and calibration process
+5. Start your game
 
 ---
 
@@ -109,7 +120,7 @@ pip install -r requirements-dev.txt
 Build:
 
 ```bash
-pyinstaller GestureDrive.spec
+pyinstaller GestureDrive-dev.spec
 ```
 
 The executable will be generated in:
@@ -122,7 +133,7 @@ dist/GestureDrive/
 
 ## Supported Games
 
-GestureDrive works with games that support Xbox controllers.
+GestureDrive works with games that support XBOX controllers.
 
 Tested with:
 
@@ -130,16 +141,19 @@ Tested with:
 * Forza Horizon 5
 * Need for Speed Unbound
 
-Additional games may also work.
+Other than racing games, games accepting XBOX controller as input also work. But may require custom control bindings both in GestureDrive and in-game.
 
 ---
 
-## Known Limitations
+## Known Limitations and Bugs
 
-* Requires adequate lighting
-* Works best with a plain background
 * Webcam quality affects tracking performance
-* Windows only
+* When accessing laptop camera, it's LED might blink 2-3 times before working. It is just how cameras talk to the app and is not GestureDrive's fault
+* Supported only on Windows
+
+* GestureDrive might crash/freeze when opening up the camera. Though it is rare can be fixed by running the app as ADMIN
+* Making the app window small might overlap certain text, but doesn't affect its working
+* Scrolling also works when it is not necessary on the home screen
 
 ---
 
@@ -157,3 +171,9 @@ Additional games may also work.
 
 Released under the MIT License.
 See the LICENSE file for details.
+
+> **Note**
+>
+>GestureDrive began as a project done for fun and to gain experience in learning about computer vision, MediaPipe, gesture detection, user interface design, and virtual gamepad emulation using the Python programming language.
+>Although it has evolved into a fully functional program, the initial purpose of GestureDrive was purely educational.
+
