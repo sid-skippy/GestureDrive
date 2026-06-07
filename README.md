@@ -67,16 +67,16 @@ No gloves. No controllers. Just a webcam.
 
 ---
 
-## Default Controls ('+' represents control of that geture can be customised)
+## Default Controls
 
-| Gesture                     | Action    |
-| --------------------------- | --------- |
-| Tilt left hand              | Steering  |
-| Open left hand +            | Handbrake |
-| Raise right thumb           | Throttle  |
-| Lower right thumb           | Brake     |
-| Flick right index finger +  | Gear Up   |
-| Flick right little finger + | Gear Down |
+| Gesture                     | Action    | Customisable controls?   |
+| --------------------------- | --------- | ------------------ |
+| Tilt left hand              | Steering  | No |
+| Open left hand              | Handbrake | Yes|
+| Raise right thumb           | Throttle  | No|
+| Lower right thumb           | Brake     | No|
+| Flick right index finger    | Gear Up   | Yes|
+| Flick right little finger   | Gear Down | Yes|
 
 ---
 
