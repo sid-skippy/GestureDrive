@@ -1,0 +1,9 @@
+from .paths import (
+    BASE_DIR, ASSETS_DIR, FONTS_DIR, CONFIG_DIR,
+    CONFIG_FILE, CALIB_FILE, MODEL_FILE,
+)
+
+__all__ = [
+    "BASE_DIR", "ASSETS_DIR", "FONTS_DIR", "CONFIG_DIR",
+    "CONFIG_FILE", "CALIB_FILE", "MODEL_FILE",
+]
