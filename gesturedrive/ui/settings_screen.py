@@ -35,7 +35,7 @@ class SettingsScreen(tk.Frame):
 
     # Control-binding definitions: (display_label, settings_key)
     _BINDINGS = [
-        ("Handbrake Gesture — Left little finger",  "handbrake_button"),
+        ("Handbrake Gesture — Left palm open",  "handbrake_button"),
         ("Gear Up Gesture — Right index finger",    "gear_up_button"),
         ("Gear Down Gesture — Right little finger", "gear_down_button"),
     ]
