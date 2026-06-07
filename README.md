@@ -175,7 +175,6 @@ Other than racing games, games accepting XBOX controller as input also work. But
 
 * Webcam quality affects tracking performance and needs a well-lit room for increased camera fps (capped to 30fps for stability)
 * When accessing laptop camera, it's LED might blink 2-3 times before working. It is just how cameras communicate and is not GestureDrive's fault
-* GestureDrive might crash/freeze when opening up the camera. Though it is VERY RARE can be fixed by running the app as ADMIN
 * Making the app window small might overlap certain text, but doesn't affect its working
 * Scrolling also works when it is not necessary on the home screen
 
