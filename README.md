@@ -37,7 +37,7 @@ No gloves. No controllers. Just a webcam.
 ### Welcome Screen
 
 <p align="center">
-  <img src="docs/images/1.png" width="800">
+  <img src="docs/images/1.png" width="600">
 </p>
 
 ### Calibration Wizard
@@ -50,27 +50,33 @@ No gloves. No controllers. Just a webcam.
 ### Settings
 
 <p align="center">
-  <img src="docs/images/2.png" width="800">
+  <img src="docs/images/2.png" width="600">
 </p>
 
 ### Runtime
 
 <p align="center">
-  <img src="docs/images/5.png" width="800">
+  <img src="docs/images/5.png" width="600">
+</p>
+
+### Gameplay
+
+<p align="center">
+  <img src="docs/images/7.png" width="600">
 </p>
 
 ---
 
-## Controls
+## Default Controls ('+' represents control of that geture can be customised)
 
-| Gesture                   | Action    |
-| ------------------------- | --------- |
-| Tilt left hand            | Steering  |
-| Open left hand            | Handbrake |
-| Raise right thumb         | Throttle  |
-| Lower right thumb         | Brake     |
-| Raise right index finger  | Gear Up   |
-| Raise right little finger | Gear Down |
+| Gesture                     | Action    |
+| --------------------------- | --------- |
+| Tilt left hand              | Steering  |
+| Open left hand +            | Handbrake |
+| Raise right thumb           | Throttle  |
+| Lower right thumb           | Brake     |
+| Flick right index finger +  | Gear Up   |
+| Flick right little finger + | Gear Down |
 
 ---
 
