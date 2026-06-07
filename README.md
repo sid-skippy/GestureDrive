@@ -1,3 +1,10 @@
+<p align="center">
+  <img src="https://img.shields.io/badge/version-v1.0.0-blue">
+  <img src="https://img.shields.io/badge/license-MIT-green">
+  <img src="https://img.shields.io/badge/platform-Windows%2010%20%7C%2011-blue">
+  <img src="https://img.shields.io/badge/python-3.10+-blue">
+</p>
+
 <p align="left">
   <img src="docs/images/6.png" width="1000">
 </p>
